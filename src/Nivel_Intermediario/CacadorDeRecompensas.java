@@ -1,5 +1,7 @@
 package Nivel_Intermediario;
 
+import java.util.List;
+
 public class CacadorDeRecompensas extends Personagem{
     private String equipamento;
 
@@ -13,6 +15,14 @@ public class CacadorDeRecompensas extends Personagem{
      * */
     public CacadorDeRecompensas(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, String equipamento) {
         super(nome, idade, afiliacao, nivelDeForca);
+        this.equipamento = equipamento;
+    }
+    /*
+     *  TODO: Sobrecarga do atributo filme da Superclasse
+     * */
+
+    public CacadorDeRecompensas(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, List<Filmes> filme, String equipamento) {
+        super(nome, idade, afiliacao, nivelDeForca, filme);
         this.equipamento = equipamento;
     }
 

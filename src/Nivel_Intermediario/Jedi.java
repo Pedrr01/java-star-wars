@@ -1,5 +1,7 @@
 package Nivel_Intermediario;
 
+import java.util.List;
+
 public class Jedi extends Personagem implements Forca {
     private String corSabreDeLuz;
 
@@ -14,6 +16,14 @@ public class Jedi extends Personagem implements Forca {
 
     public Jedi(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, String corSabreDeLuz) {
         super(nome, idade, afiliacao, nivelDeForca);
+        this.corSabreDeLuz = corSabreDeLuz;
+    }
+
+    /*
+     *  TODO: Sobrecarga do atributo filme da Superclasse
+     * */
+    public Jedi(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, List<Filmes> filme, String corSabreDeLuz) {
+        super(nome, idade, afiliacao, nivelDeForca, filme);
         this.corSabreDeLuz = corSabreDeLuz;
     }
 

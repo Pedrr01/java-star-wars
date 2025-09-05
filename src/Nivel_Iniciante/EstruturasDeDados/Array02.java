@@ -1,4 +1,4 @@
-package Nivel_Iniciante.TiposDeDados;
+package Nivel_Iniciante.EstruturasDeDados;
 
 public class Array02 {
     public static void main(String[] args) {

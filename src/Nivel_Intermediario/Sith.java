@@ -1,5 +1,7 @@
 package Nivel_Intermediario;
 
+import java.util.List;
+
 public class Sith extends Personagem implements Forca{
     private String patente;
 
@@ -13,6 +15,13 @@ public class Sith extends Personagem implements Forca{
      * */
     public Sith(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, String patente) {
         super(nome, idade, afiliacao, nivelDeForca);
+        this.patente = patente;
+    }
+    /*
+     *  TODO: Sobrecarga do atributo filme da Superclasse
+     * */
+    public Sith(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, List<Filmes> filme, String patente) {
+        super(nome, idade, afiliacao, nivelDeForca, filme);
         this.patente = patente;
     }
 
@@ -35,6 +44,14 @@ public class Sith extends Personagem implements Forca{
     @Override
     public void falar(){
         System.out.println("Que a ordem do Império seja feita sem questionamentos.");
+    }
+
+    public String getPatente() {
+        return patente;
+    }
+
+    public void setPatente(String patente) {
+        this.patente = patente;
     }
 
     @Override

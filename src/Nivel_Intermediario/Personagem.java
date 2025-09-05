@@ -1,10 +1,13 @@
 package Nivel_Intermediario;
 
+import java.util.List;
+
 public abstract class Personagem {
     private String nome;
     private int idade;
     private Afiliacao afiliacao;
     private int nivelDeForca;
+    private List<Filmes> filme;
 
     public Personagem(String nome, int idade, Afiliacao afiliacao) {
         this.nome = nome;
@@ -20,6 +23,14 @@ public abstract class Personagem {
         this.nivelDeForca = nivelDeForca;
     }
 
+    /*
+     *  TODO: Sobrecarga do atributo filme
+     * */
+    public Personagem(String nome, int idade, Afiliacao afiliacao, int nivelDeForca, List<Filmes> filme) {
+        this(nome, idade, afiliacao, nivelDeForca);
+        this.filme = filme;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -28,12 +39,12 @@ public abstract class Personagem {
         this.nome = nome;
     }
 
-    public int getSaude() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setSaude(int saude) {
-        this.idade = saude;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     public Afiliacao getAfiliacao() {
@@ -42,6 +53,22 @@ public abstract class Personagem {
 
     public void setAfiliacao(Afiliacao afiliacao) {
         this.afiliacao = afiliacao;
+    }
+
+    public int getNivelDeForca() {
+        return nivelDeForca;
+    }
+
+    public void setNivelDeForca(int nivelDeForca) {
+        this.nivelDeForca = nivelDeForca;
+    }
+
+    public List<Filmes> getFilme() {
+        return filme;
+    }
+
+    public void setFilme(List<Filmes> filme) {
+        this.filme = filme;
     }
 
     public String apresentar(){

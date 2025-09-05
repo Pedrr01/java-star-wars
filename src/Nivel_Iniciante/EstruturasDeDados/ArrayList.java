@@ -1,4 +1,4 @@
-package Nivel_Iniciante.TiposDeDados;
+package Nivel_Iniciante.EstruturasDeDados;
 
 import java.util.List;
 
